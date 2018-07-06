@@ -22,13 +22,13 @@
     var tokenArray = accessToken.split("=")
     var token= tokenArray[1]
     console.log(token)
-    
     function myFunction() {
         document.getElementById("tokenbox").value = token
         var copyText = document.getElementById("tokenbox");
         copyText.select();
         document.execCommand("copy");
-	close();
+	console.log('token copied')
+        close();
 
       }
   </script>

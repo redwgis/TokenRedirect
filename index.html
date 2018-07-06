@@ -3,6 +3,7 @@
 <body>
   <button type="button" onclick="window.location.href='https://www.arcgis.com/sharing/oauth2/authorize?client_id=9eKWWlGTppxktXFc&response_type=token&expiration=20160&redirect_uri=https://redwgis.github.io/TokenRedirect/'">Sign In</button> 
     <button type="button" onclick="ViewToken()">Show Token</button> 
+  <iframe src="https://redwgis.github.io/TokenRedirect/"></iframe>
   <div id="showtoken"></div>
   <script>
     var hashToken=window.location.hash
@@ -10,8 +11,7 @@
     var accessToken=hashArray[0]
     var tokenArray = accessToken.split("=")
     var token= tokenArray[1]
-    localStorage.setItem("token", token);
-        console.log(token)
+    console.log(token)
     function ViewToken() {
         document.getElementById("showtoken").innerHTML = token;
         localStorage.setItem("token", token);

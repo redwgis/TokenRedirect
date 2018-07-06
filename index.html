@@ -11,7 +11,7 @@
     var tokenArray = accessToken.split("=")
     var token= tokenArray[1]
     localStorage.setItem("token", token);
-    document.cookie = "token"=token;
+    document.cookie = "token=token";
         console.log(token)
     function ViewToken() {
         document.getElementById("showtoken").innerHTML = token;

@@ -5,8 +5,10 @@
 <p>I'm hosted with GitHub Pages.</p>
   <button type="button">Click Me!</button>  
   <script>
-    var hashVal=window.location.hash
-        console.log(hashVal)
+    var hashToken=window.location.hash
+    var hashArray = hashToken.split("&")
+    var accessToken=hashArray[0]
+        console.log('hashArray')
   </script>
 </body>
 </html>

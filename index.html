@@ -12,8 +12,8 @@
     var token= tokenArray[1]
     console.log(token)
     function GetToken() {
-      var copyToken = token
       document.getElementById("showtoken").innerHTML = token;
+      var copyToken = document.getElementById("showtoken").value
       copyToken.select();
       document.execCommand("copy");
     }

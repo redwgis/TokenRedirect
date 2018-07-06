@@ -8,7 +8,9 @@
     var hashToken=window.location.hash
     var hashArray = hashToken.split("&")
     var accessToken=hashArray[0]
-        console.log(accessToken)
+    var tokenArray = accessToken.split("=")
+    var token= tokenArray[1]
+        console.log(token)
   </script>
 </body>
 </html>

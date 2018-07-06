@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
 <body>
+  <!-- The text field -->
+<input type="text" value="Hello World" id="myInput">
+
+<!-- The button used to copy the text -->
+<button onclick="myFunction()">Copy text</button>
+  
+  
+  
+  
+  
   <button type="button" onclick="window.location.href='https://www.arcgis.com/sharing/oauth2/authorize?client_id=9eKWWlGTppxktXFc&response_type=token&expiration=20160&redirect_uri=https://redwgis.github.io/TokenRedirect/'">Sign In</button> 
     <button type="button" onclick="GetToken()">Show Token</button> 
   <div id="showtoken"></div>
@@ -11,11 +21,26 @@
     var tokenArray = accessToken.split("=")
     var token= tokenArray[1]
     console.log(token)
+    
+    function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
+
+  /* Select the text field */
+  copyText.select();
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
+    
+    
+    
     function GetToken() {
       document.getElementById("showtoken").innerHTML = token;
-      var copyToken = document.getElementById("showtoken").value
-      copyToken.select();
-      document.execCommand("copy");
+
     }
   </script>
 </body>

@@ -12,6 +12,8 @@
     var token= tokenArray[1]
     localStorage.setItem("token", token);
         console.log(token)
+    document.getElementById("token").innerHTML = localStorage.getItem("lastname");
   </script>
+  <div id="token"></div>
 </body>
 </html>

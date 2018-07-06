@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <body>
-
   <button type="button" onclick="window.location.href='https://www.arcgis.com/sharing/oauth2/authorize?client_id=9eKWWlGTppxktXFc&response_type=token&expiration=20160&redirect_uri=https://redwgis.github.io/TokenRedirect/'">Click Me!</button> 
-  <div id="token"></div>
+  <div id="showtoken"></div>
   <script>
     var hashToken=window.location.hash
     var hashArray = hashToken.split("&")
@@ -12,8 +11,7 @@
     var token= tokenArray[1]
     localStorage.setItem("token", token);
         console.log(token)
-    document.getElementById("token").innerHTML = localStorage.getItem(token);
+    document.getElementById("showtoken").innerHTML = localStorage.getItem(token);
   </script>
-  <div id="token"></div>
 </body>
 </html>
